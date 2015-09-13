@@ -327,6 +327,7 @@ public function gruposxcarreraycuatri($carrera,$cuatri){
 			'Grupo.career_id'=>$carrera,'Grupo.period'=>$cuatri),'recursive'=>-1));
 		$this->set(compact('grupos'));
 	}
+	
 }
 
 public function buscaralumnos($carrera,$cuatri,$grupo){

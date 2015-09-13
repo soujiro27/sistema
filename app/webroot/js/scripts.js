@@ -589,7 +589,7 @@ function matxCuatyCarr(){
 			success:function(response){
 			
 
-				console.info(response);
+			
 
 				if(typeof response !== 'undefined' && response.length >0 ){
 				
@@ -754,16 +754,16 @@ function materiasPorCoordinador(){
 
 	$('select#cuatriCoordiListado, select#carreraCoordiListado').on('change',function(){
 
-	
 		filas=[];
 		tienemodulos=[];
-		carrera = $('select#carreraCoordiListado option:selected').val();
-		cuatrimestre = $('select#cuatriCoordiListado option:selected').val();
+		carrera = $('select#carreraCoordiListado').val();
+		cuatrimestre = $('select#cuatriCoordiListado').val();
 
 		// alert(carrera+" "+cuatrimestre);
 
 		if( carrera != 0 && cuatrimestre != 0 ){
 			// seccion ajax
+	console.log(carrera);
 
 			$.ajax({
 
