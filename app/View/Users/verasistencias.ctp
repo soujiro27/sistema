@@ -1,7 +1,20 @@
+<section class="consultarAsistencias">
+<nav class="asistencias">
+		
+	<?php 
+
+	echo $this->element('menu');
+	 ?>
+	</nav>
+
+
+<div class="encabezadoCoordi">
 <h3>Consultar asistencias</h3>
+<p class="iconoMenu"></p>	
+</div>
 
 <select id="asistenciaCarrera" data-tipo="<?php echo $current_user['group_id']; ?>">
-	<option value="txt">Seleccione una carrera</option>
+	<option value="txt">Carrera</option>
 	<?php 
 	if($current_user['group_id']== 6 ){
 		foreach($carreras as $k =>$carrera){
@@ -20,7 +33,7 @@
 
 
 <select  id="cuatriAsistencia" >
-	<option value="txt">Seleccione un cuatrimestre</option>
+	<option value="txt">Cuatrimestre</option>
 	<option value="1">1</option>
 	<option value="2">2</option>
 	<option value="3">3</option>
@@ -42,7 +55,6 @@
 	
 </select>
 
-<button id="buscaAsistencia">Buscar</button>
 <form id="opcionBusqueda">
 <input type="radio" name="busca" value="dia">Por dia
 <input type="radio" name="busca" value="rango">Por rango
@@ -52,23 +64,24 @@
 
 
 	
-<input type="text"  id="fechaAsistencia1" class="datepicker" hidden >
-<input type="text"  id="fechaAsistencia2" class="datepicker" hidden>
+<input type="text"  id="fechaAsistencia1" class="datepicker" hidden placeholder="Fecha Inicio">
+<input type="text"  id="fechaAsistencia2" class="datepicker" hidden placeholder="Fecha Final">
+<button id="buscaAsistencia">Buscar</button>
 
 <div id="seccionAsistencias">
 	
 <table id="resultadosAsistencias" hidden>
 
-	<tr>
+	<tr class="encabezadosTabla">
 		<th>Nombre</th>
 		<th>Fecha</th>
 		<th>Estatus</th>
-		<th>Nota</th>
+		<th class="notasAsistencia">Nota</th>
 		<?php 
 
 		if($current_user['group_id']==6){
 
-		echo "<th>Editar</th>";
+		echo "<th class='notasAsistencia'>Editar</th>";
 		}
 
 		?>
@@ -85,3 +98,4 @@
 echo $this->Html->script('scripts');
 	}
 ?>
+</section>

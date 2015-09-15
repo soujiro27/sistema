@@ -26,23 +26,29 @@
 		</figure>
 		<div class="textoCoordi">
 			
-	
+	<!--
 		
-		
+			<?php echo $this->Html->link('asignar',array('action'=>'assigncareers',$coordi['User']['id'])); ?> 
+			
+	<?php echo $this->Html->link('edit', array('action'=>'editacoordinador',$coordi['User']['id'])); ?>
+	-->
 				
 			<?php echo $this->Html->link('Ver Carreras',array('action'=>'vercarreras',$coordi['User']['id']))?>
-			
 		
+				
 	
+		
+
+				
+
 	
 	<?php echo $this->Form->postlink('Eliminar',array('action'=>'eliminarcoordi',$coordi['User']['id']),array('confirm'=>'Deceas eliminar a este coordinador ?')); ?>
-	
-</div>
+
 				
 				
 		
 
-
+</div>
 
 	
 

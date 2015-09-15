@@ -1,56 +1,29 @@
-<h2>Listado de maestros</h2>
-
-<table>
+<section class="maestros">
 	
-	<tr>
-		<!-- <th>id</th> -->
-		<th>Nombre </th>
+<nav class="maestros">
 		
+	<?php 
 
+	echo $this->element('menu');
+	 ?>
+	</nav>
 
-		<th>Email</th>
+<div class="encabezadoCoordi">
+<h3>Docentes</h3>
+<p class="iconoMenu"></p>	
+</div>
+
+<section class="datosMaestro">
 	
-	<th>Nivel de educacion</th>
-	<th>Foto</th>
-		<th>Materias que imparte:</th>
-
-		<?php 
-		if($current_user['group_id']==6){
-			echo "<th>Acciones</th>";
-		}
-
-		?>
-		
-	</tr>
-
 <?php foreach($maestros as $k =>$maestro ): ?>
-	<tr>
-		
-		<td><?php echo $maestro ['User']['name'] ?></td>
-	
+<article>
+<h2><?php echo $maestro ['EmployeeProfile']['lv_education']." ".$maestro ['User']['name']?></h2>
+<h3><?php echo $maestro ['User']['email'] ?></h3>
+<figure class="avatarMaestro">
+	<?php echo $this->Html->image('../files/employee_profile/foto/'.$maestro['EmployeeProfile']['foto_dir'].'/'.'thumb_'.$maestro['EmployeeProfile']['foto']);?>
+</figure>
 
-		<td><?php echo $maestro ['User']['email'] ?></td>
-		
-		<td><?php echo $maestro ['EmployeeProfile']['lv_education'] ?></td>
-
-		<td><?php echo $this->Html->image('../files/employee_profile/foto/'.$maestro['EmployeeProfile']['foto_dir'].'/'.'thumb_'.$maestro['EmployeeProfile']['foto']) ?></td>
-	
-		<td>
-			<?php 
-
-				foreach ($materiasImparte as $key => $impartiendo) {
-					if($impartiendo['teacher_id'] == $maestro['User']['id']){
-						echo '<p>'.$impartiendo['course_name'].'</p>';
-
-					
-					}
-
-				}
-
-			?>
-		</td>
-
-		<?php 
+<?php 
 
 		if($current_user['group_id']== 6 ){
 
@@ -68,11 +41,51 @@
 
 	?>
 
-	</tr>
 
+	<?php 
+
+				foreach ($materiasImparte as $key => $impartiendo) {
+					if($impartiendo['teacher_id'] == $maestro['User']['id']){
+						echo '<p>'.$impartiendo['course_name'].'</p>';
+
+					
+					}
+
+				}
+
+			?>
 <?php endforeach;?>
+</article>
+
+</section>
 
 
-</table>
+		
+		
 
-<?php echo $this->Html->link('agregar maestro', array('controller'=>'users','action'=>'addTeacher')); ?>
+
+	
+	
+		
+		<?php 
+
+		if($current_user['group_id']== 6 ){
+		echo $this->Html->link('agregar maestro', array('controller'=>'users','action'=>'addTeacher'));
+
+		echo "<td>";
+			 echo $this->Html->link('Editar', array('action'=>'editTeacher',$maestro['User']['id'])); 
+			
+			echo $this->Form->postlink('Eliminar',array('action'=>'deleteTeacher',$maestro['User']['id']),array('confirm'=>'deceas Eliminar al maestro')); 
+		echo "</td>";
+		}else {
+
+		}
+
+	
+
+	?>
+
+
+
+
+</section>

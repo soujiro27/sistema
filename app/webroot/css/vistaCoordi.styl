@@ -1,12 +1,12 @@
 @import iconos
 
-section.datosCoordi,section.carrerasCoordi
+section.datosCoordi,section.carrerasCoordi,section.maestros,section.consultarAsistencias
 
 	div.encabezadoCoordi
 		background azulObscuro
 		color blanco
 		text-align left
-		width 100%
+		width 92%
 		display block
 		margin 0% 
 		padding 4%
@@ -16,7 +16,7 @@ section.datosCoordi,section.carrerasCoordi
 			font-family Flaticon
 			width 24px
 			padding 5px
-			margin -30px 30px 
+			margin -30px 0px -30px 30px 
 			color blanco
 			border 1px solid plata
 			border-radius 5px
@@ -102,3 +102,78 @@ section.datosCoordi,section.carrerasCoordi
 				text-decoration none
 				display block
 				color azulObscuro
+	section.datosMaestro
+		color azulObscuro
+		h2
+			margin 10px auto
+			font-size 18px
+			font-weight normal
+			text-align center
+		h3
+			background verde
+			font-size 16px
+			text-align center
+			margin 10px auto
+			color blanco
+			padding 1%
+			width 80%
+			display block
+			border-radius 5px
+			font-weight normal
+			
+		figure.avatarMaestro
+			width 100px
+			height 100px
+			display block
+			margin 0 auto
+			box-shadow none
+			img
+				width 100%
+				border-radius 50%
+section.consultarAsistencias
+	select
+		display block
+		width 80%
+		margin 15px auto
+		padding 2%
+		background verde
+		border none
+		color blanco
+		border-bottom 4px solid esmeralda
+	button
+		display block
+		margin 5px auto
+		background naranjaObscuro
+		color blanco
+		padding 2%
+		border none 
+		border-bottom 4px solid naranja
+	input[type=radio]
+		
+		width 25%
+	input
+		border none
+		background esmeralda
+		padding 2%
+		width 80%
+		display block
+		margin 4% auto
+		border-bottom 4px solid plata
+		color blanco
+	table#resultadosAsistencias
+		width 100%
+		th
+			width 38%
+			padding 1%
+			text-align center
+			vertical-align top 
+			padding-top 18px
+		tr
+			margin 3% 0
+			width 100%
+			&.encabezadosTabla
+				background azulObscuro
+				
+		.notasAsistencia
+			display none 
+			

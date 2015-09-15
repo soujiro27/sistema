@@ -6,25 +6,31 @@
   font-style: normal;
 }
 section.datosCoordi div.encabezadoCoordi,
-section.carrerasCoordi div.encabezadoCoordi {
+section.carrerasCoordi div.encabezadoCoordi,
+section.maestros div.encabezadoCoordi,
+section.consultarAsistencias div.encabezadoCoordi {
   background: #2c3e50;
   color: #fff;
   text-align: left;
-  width: 100%;
+  width: 92%;
   display: block;
   margin: 0%;
   padding: 4%;
 }
 section.datosCoordi div.encabezadoCoordi h3,
-section.carrerasCoordi div.encabezadoCoordi h3 {
+section.carrerasCoordi div.encabezadoCoordi h3,
+section.maestros div.encabezadoCoordi h3,
+section.consultarAsistencias div.encabezadoCoordi h3 {
   margin: 0;
 }
 section.datosCoordi div.encabezadoCoordi p.iconoMenu,
-section.carrerasCoordi div.encabezadoCoordi p.iconoMenu {
+section.carrerasCoordi div.encabezadoCoordi p.iconoMenu,
+section.maestros div.encabezadoCoordi p.iconoMenu,
+section.consultarAsistencias div.encabezadoCoordi p.iconoMenu {
   font-family: Flaticon;
   width: 24px;
   padding: 5px;
-  margin: -30px 30px;
+  margin: -30px 0px -30px 30px;
   color: #fff;
   border: 1px solid #bdc3c7;
   border-radius: 5px;
@@ -34,20 +40,28 @@ section.carrerasCoordi div.encabezadoCoordi p.iconoMenu {
   float: right;
 }
 section.datosCoordi div.encabezadoCoordi p.iconoMenu:after,
-section.carrerasCoordi div.encabezadoCoordi p.iconoMenu:after {
+section.carrerasCoordi div.encabezadoCoordi p.iconoMenu:after,
+section.maestros div.encabezadoCoordi p.iconoMenu:after,
+section.consultarAsistencias div.encabezadoCoordi p.iconoMenu:after {
   content: '\e004';
 }
 section.datosCoordi article,
-section.carrerasCoordi article {
+section.carrerasCoordi article,
+section.maestros article,
+section.consultarAsistencias article {
   border-bottom: 1px solid #7f8c8d;
 }
 section.datosCoordi article h2,
-section.carrerasCoordi article h2 {
+section.carrerasCoordi article h2,
+section.maestros article h2,
+section.consultarAsistencias article h2 {
   font-size: 16px;
   text-align: center;
 }
 section.datosCoordi article figure,
-section.carrerasCoordi article figure {
+section.carrerasCoordi article figure,
+section.maestros article figure,
+section.consultarAsistencias article figure {
   width: 90px;
   height: 90px;
   border-radius: 50%;
@@ -58,12 +72,16 @@ section.carrerasCoordi article figure {
   vertical-align: top;
 }
 section.datosCoordi article figure img,
-section.carrerasCoordi article figure img {
+section.carrerasCoordi article figure img,
+section.maestros article figure img,
+section.consultarAsistencias article figure img {
   width: 100%;
   border-radius: 50%;
 }
 section.datosCoordi article a,
-section.carrerasCoordi article a {
+section.carrerasCoordi article a,
+section.maestros article a,
+section.consultarAsistencias article a {
   width: 60%;
   text-decoration: none;
   background-color: #2ecc71;
@@ -76,16 +94,22 @@ section.carrerasCoordi article a {
   text-align: center;
 }
 section.datosCoordi article a:nth-last-child(1),
-section.carrerasCoordi article a:nth-last-child(1) {
+section.carrerasCoordi article a:nth-last-child(1),
+section.maestros article a:nth-last-child(1),
+section.consultarAsistencias article a:nth-last-child(1) {
   background-color: #e74c3c;
 }
 section.datosCoordi article div.textoCoordi,
-section.carrerasCoordi article div.textoCoordi {
+section.carrerasCoordi article div.textoCoordi,
+section.maestros article div.textoCoordi,
+section.consultarAsistencias article div.textoCoordi {
   width: 100%;
   display: inline-block;
 }
 section.datosCoordi article div.textoCoordi p,
-section.carrerasCoordi article div.textoCoordi p {
+section.carrerasCoordi article div.textoCoordi p,
+section.maestros article div.textoCoordi p,
+section.consultarAsistencias article div.textoCoordi p {
   margin: 1% 1% 4% 1%;
   padding: 2%;
   background: #2ecc71;
@@ -93,23 +117,31 @@ section.carrerasCoordi article div.textoCoordi p {
   border-radius: 5px;
 }
 section.datosCoordi div.administradas h2,
-section.carrerasCoordi div.administradas h2 {
+section.carrerasCoordi div.administradas h2,
+section.maestros div.administradas h2,
+section.consultarAsistencias div.administradas h2 {
   font-size: 17px;
   font-weight: normal;
   margin: 5px;
   text-align: center;
 }
 section.datosCoordi div.administradas h3,
-section.carrerasCoordi div.administradas h3 {
+section.carrerasCoordi div.administradas h3,
+section.maestros div.administradas h3,
+section.consultarAsistencias div.administradas h3 {
   text-align: center;
   margin: 5px;
 }
 section.datosCoordi table,
-section.carrerasCoordi table {
+section.carrerasCoordi table,
+section.maestros table,
+section.consultarAsistencias table {
   color: #fff;
 }
 section.datosCoordi table tr,
-section.carrerasCoordi table tr {
+section.carrerasCoordi table tr,
+section.maestros table tr,
+section.consultarAsistencias table tr {
   width: 100%;
   height: 55px;
   background: #16a085;
@@ -117,27 +149,134 @@ section.carrerasCoordi table tr {
   display: block;
 }
 section.datosCoordi table td,
-section.carrerasCoordi table td {
+section.carrerasCoordi table td,
+section.maestros table td,
+section.consultarAsistencias table td {
   height: 47px;
   font-size: 15px;
   padding: 1%;
 }
 section.datosCoordi table td.nombre,
-section.carrerasCoordi table td.nombre {
+section.carrerasCoordi table td.nombre,
+section.maestros table td.nombre,
+section.consultarAsistencias table td.nombre {
   width: 70%;
   display: inline-block;
   border-right: 3px solid #bdc3c7;
 }
 section.datosCoordi table td.accion,
-section.carrerasCoordi table td.accion {
+section.carrerasCoordi table td.accion,
+section.maestros table td.accion,
+section.consultarAsistencias table td.accion {
   width: 22%;
   display: inline-block;
 }
 section.datosCoordi table td.accion a,
-section.carrerasCoordi table td.accion a {
+section.carrerasCoordi table td.accion a,
+section.maestros table td.accion a,
+section.consultarAsistencias table td.accion a {
   text-align: center;
   padding-top: 15px;
   text-decoration: none;
   display: block;
   color: #2c3e50;
+}
+section.datosCoordi section.datosMaestro,
+section.carrerasCoordi section.datosMaestro,
+section.maestros section.datosMaestro,
+section.consultarAsistencias section.datosMaestro {
+  color: #2c3e50;
+}
+section.datosCoordi section.datosMaestro h2,
+section.carrerasCoordi section.datosMaestro h2,
+section.maestros section.datosMaestro h2,
+section.consultarAsistencias section.datosMaestro h2 {
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+section.datosCoordi section.datosMaestro h3,
+section.carrerasCoordi section.datosMaestro h3,
+section.maestros section.datosMaestro h3,
+section.consultarAsistencias section.datosMaestro h3 {
+  background: #16a085;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px auto;
+  color: #fff;
+  padding: 1%;
+  width: 80%;
+  display: block;
+  border-radius: 5px;
+  font-weight: normal;
+}
+section.datosCoordi section.datosMaestro figure.avatarMaestro,
+section.carrerasCoordi section.datosMaestro figure.avatarMaestro,
+section.maestros section.datosMaestro figure.avatarMaestro,
+section.consultarAsistencias section.datosMaestro figure.avatarMaestro {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: none;
+}
+section.datosCoordi section.datosMaestro figure.avatarMaestro img,
+section.carrerasCoordi section.datosMaestro figure.avatarMaestro img,
+section.maestros section.datosMaestro figure.avatarMaestro img,
+section.consultarAsistencias section.datosMaestro figure.avatarMaestro img {
+  width: 100%;
+  border-radius: 50%;
+}
+section.consultarAsistencias select {
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  padding: 2%;
+  background: #16a085;
+  border: none;
+  color: #fff;
+  border-bottom: 4px solid #2ecc71;
+}
+section.consultarAsistencias button {
+  display: block;
+  margin: 5px auto;
+  background: #d35400;
+  color: #fff;
+  padding: 2%;
+  border: none;
+  border-bottom: 4px solid #f39c12;
+}
+section.consultarAsistencias input[type=radio] {
+  width: 25%;
+}
+section.consultarAsistencias input {
+  border: none;
+  background: #2ecc71;
+  padding: 2%;
+  width: 80%;
+  display: block;
+  margin: 4% auto;
+  border-bottom: 4px solid #bdc3c7;
+  color: #fff;
+}
+section.consultarAsistencias table#resultadosAsistencias {
+  width: 100%;
+}
+section.consultarAsistencias table#resultadosAsistencias th {
+  width: 38%;
+  padding: 1%;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 18px;
+}
+section.consultarAsistencias table#resultadosAsistencias tr {
+  margin: 3% 0;
+  width: 100%;
+}
+section.consultarAsistencias table#resultadosAsistencias tr.encabezadosTabla {
+  background: #2c3e50;
+}
+section.consultarAsistencias table#resultadosAsistencias .notasAsistencia {
+  display: none;
 }

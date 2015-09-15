@@ -5,6 +5,9 @@ $(function(){
 	$('div.cierreMenu').on('click',escondeMenu);
 	$('div.alumnos').on('click',menuAlumnos);
 	$('div.coordinador').on('click',coordinador);
+	$('div.inicio').on('click',inicio);
+	$('div.maestro').on('click',maestro);
+	$('div.salir').on('click',salir);
 });
 
 
@@ -46,7 +49,7 @@ function coordinador()
 	}
 	else if (clase=='indexDirector') 
 		{
-			var url='users/indexcoordinator';
+			var url='/sistema/users/indexcoordinator';
 			$(location).attr('href',url);
 		}
 	else
@@ -55,4 +58,22 @@ function coordinador()
 	console.log("mal"); 
 	$(location).attr('href',url);
 	}
+}
+
+function inicio()
+{
+	var url='/sistema/users/';
+	$(location).attr('href',url);
+}
+
+function maestro()
+{
+	var url='/sistema/users/indexTeacher';
+	$(location).attr('href',url);
+}
+
+function salir()
+{
+	var url='/sistema/users/logout';
+	$(location).attr('href',url);
 }

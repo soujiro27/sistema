@@ -56,7 +56,7 @@ public function isAuthorized($user){
 
 	if ($user['group_id']== '7' ){
 
-		if(in_array($this->action,array('index','viewmycourses','calificar','asistencias','cuatrimestral','misclases','editTeacher','extraordinario'))){
+		if(in_array($this->action,array('index','viewmycourses','calificar','asistencias','cuatrimestral','misclases','editTeacher','extraordinario','consultacalif'))){
 			return true;
 		}else {
 			if($this->Auth->user('id')){
@@ -217,8 +217,8 @@ public function addStudent(){
 				'Career.id'=>$this->request->data['StudentProfile']['career_id']),
 				'fields'=>'Career.abrev','recursive'=>-1));
 		
-			$password=$simbolos[rand(0,2)].$abrev['Career']['abrev'].$nombre[0].$ap[0].$am[0].date("Y").rand(10,90);
-
+			//$password=$simbolos[rand(0,2)].$abrev['Career']['abrev'].$nombre[0].$ap[0].$am[0].date("Y").rand(10,90);
+			$password='contraseña';
 			$this->request->data['User']['password']=$password;
 
 			// $email = new CakeEmail('default');
@@ -410,8 +410,8 @@ public function addTeacher(){
 
 		$simbolos=['@','#','$'];
 		
-		$password=$simbolos[rand(0,2)].$lv.$nombre[0].$ap[0].$am[0].date("Y").rand(10,90);
-
+		//$password=$simbolos[rand(0,2)].$lv.$nombre[0].$ap[0].$am[0].date("Y").rand(10,90);
+		$password="contraseña";
 			$this->request->data['User']['password']=$password;
 
 			// $email = new CakeEmail('default');
@@ -422,7 +422,7 @@ public function addTeacher(){
 
 		if($this->User->saveAssociated($this->request->data)):
 			$this->Session->setFlash('Maestro agregado');
-			$this->redirect(array('action'=>'indexTeacher'));
+			$this->redirect(array('action'=>'index'));
 			endif;
 		}
 	endif;
@@ -867,18 +867,20 @@ $existe=$this->Assist->find('count',array('conditions'=>array(
 		'Assist.date_assist'=>$fecha,
 		'Assist.grupo_id'=>$grupo,
 		'Assist.course_id'=>$id_materia)));
+// 
+// if ($imparte === 0){
+// 	$this->Session->setFlash('Hoy no impartes esta materia','default',array('class'=>'mensajeError'));
+// 	$this->redirect(array('action'=>'index'));
+// } else if($existe >= 1 ){
+// 	$this->Session->setFlash('Ya pasaste asistencia de esta materia ','default',array('class'=>'mensajeError'));
+// 		$this->redirect(array('controller'=>'users','action'=>'index'));
+// }
 
-if ($imparte === 0){
-	$this->Session->setFlash('Hoy no impartes esta materia','default',array('class'=>'mensajeError'));
-	$this->redirect(array('action'=>'index'));
-} else if($existe >= 1 ){
-	$this->Session->setFlash('Ya pasaste asistencia de esta materia ','default',array('class'=>'mensajeError'));
-		$this->redirect(array('controller'=>'users','action'=>'index'));
-}
 
 
+ if ($imparte > 0 && $existe==0){
+// else if ($imparte > 0 && $existe==0){
 
-else if ($imparte > 0 && $existe==0){
 
 
 if($this->request->is('post')):
@@ -888,8 +890,9 @@ if($this->request->is('post')):
 		$this->redirect(array('controller'=>'users','action'=>'index'));
 	endif;
 endif;
-}
-	$modulos=$this->CourseModule->find('all',array('conditions'=>array('CourseModule.course_id'=>$id_materia,'CourseModule.day'=>$dia,'CourseModule.grupo_id'=>$grupo)));
+}   //se comento para poder testear las asistencias y omitir el dia 
+	//$modulos=$this->CourseModule->find('all',array('conditions'=>array('CourseModule.course_id'=>$id_materia,'CourseModule.day'=>$dia,'CourseModule.grupo_id'=>$grupo)));
+	$modulos=$this->CourseModule->find('all',array('conditions'=>array('CourseModule.course_id'=>$id_materia,'CourseModule.grupo_id'=>$grupo)));
 	// pr($modulos);
 	$grup=$this->Grupo->Find('all',array('conditions'=>array('Grupo.id'=>$grupo)));
 	$estudiantes=$this->User->StudentProfile->find('all',array('conditions'=>array('StudentProfile.career_id'=>$career_id,
@@ -957,7 +960,7 @@ public function alumno(){
 	$contador= sizeof($materia);
 	$derechoCuatri=[];
 	$notaCalfFin=[];
-
+	$imparteMaterias=[];
 
 	for($x=0;$x<$contador; $x++){
 
@@ -1030,6 +1033,19 @@ public function alumno(){
 				'course_id'=>$materiaid,
 				'derecho_cuatri'=>$mensaje);
 		}
+
+		$imp=$this->Teachercourse->find('all',array('conditions'=>array(
+			'Teachercourse.course_id'=>$materiaid,
+			'Teachercourse.grupo_id'=>$cuatrimestre[0]['StudentProfile']['grupo_id'])));
+		if(sizeof($imp)>0){
+		$teach=$this->User->find('all',array('conditions'=>array(
+			'User.id'=>$imp[0]['Teachercourse']['user_id'])));
+
+		$imparteMaterias[$materiaid]=array(
+			'course_id'=>$materiaid,
+			'teacher_name'=>$teach[0]['User']['name'],
+			'teacher_imgProfile'=>'../files/employee_profile/foto/'.$teach[0]['EmployeeProfile']['foto_dir'].'/thumb_'.$teach[0]['EmployeeProfile']['foto']);
+		}
 		
 		array_push($goals,$this->Goal->find('list',array('conditions'=>array('Goal.created BETWEEN ? AND ? '=>array($inicio,$fin),
 			'Goal.course_id'=>$materia[$x]['Course']['id'],'Goal.grupo_id'=>$cuatrimestre[0]['StudentProfile']['grupo_id']),'fields'=>array('Goal.id','Goal.description','Goal.parcial'))));
@@ -1054,7 +1070,7 @@ public function alumno(){
 	}
 
 	// $goals=$this->Goal->find('all',array('conditions'=>array('Goal.course_id'=>$materia)));
-	$this->set(compact('cuatrimestre','materia','nombre','goals','calif','diasDeClase','user_id','examenes','calificacionesParciales','derechoCuatri','notaCalfFin'));
+	$this->set(compact('imparteMaterias','cuatrimestre','materia','nombre','goals','calif','diasDeClase','user_id','examenes','calificacionesParciales','derechoCuatri','notaCalfFin'));
 	}else {
 		$this->Session->setFlash('denegado','default',array('class'=>'mensajeError'));
 		$this->redirect(array('action'=>'index'));
@@ -2188,7 +2204,50 @@ public function cerrarcuatri($user_id){
 
 	
 }
+public function consultacalif($course_id,$grupo,$cuatri){
 
+
+	$cuatriInicio=$this->Semester->find('first',array('order'=>'id DESC'));
+	$inicio=date('Y-m-d H:i:s',strtotime($cuatriInicio['Semester']['inicio']));
+	$fin=date('Y-m-d H:i:s',strtotime($cuatriInicio['Semester']['fin']));
+
+	$calificaciones=[];
+
+	$estudiantes=$this->User->StudentProfile->find('all',array('conditions'=>array(
+		'StudentProfile.grupo_id'=>$grupo,
+		'StudentProfile.semester'=>$cuatri)));
+	$materia=$this->Course->find('all',array('conditions'=>array(
+		'Course.id'=>$course_id)));
+	$gpo=$this->Grupo->find('all',array('conditions'=>array(
+		'Grupo.id'=>$grupo)));
+
+	for($x=0;$x<sizeof($estudiantes);$x++){
+
+		$idAlumno=$estudiantes[$x]['User']['id'];
+
+		$calif=$this->PartialScore->find('all',array('conditions'=>array(
+			'PartialScore.created BETWEEN ? AND ?'=>array($inicio,$fin),
+			'PartialScore.user_id'=>$idAlumno,
+			'PartialScore.course_id'=>$course_id)));
+		// $partial=$calif[$x]['PartialScore']['partial'];
+
+		array_push($calificaciones, $calif);
+		// for($w=0;$w<sizeof($calif);$w++){
+
+		// 	if(array_key_exists($id,))
+
+
+
+
+		// }
+
+
+	}
+
+	$this->set(compact('calificaciones','estudiantes','materia','gpo'));
+
+
+}
 }
 
 
