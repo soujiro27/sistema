@@ -93,9 +93,13 @@
 
 
 <?php 
-	if($current_user['group_id']==6){
+	// if($current_user['group_id']==6){
 
 echo $this->Html->script('scripts');
-	}
+
+	//}
 ?>
 </section>
+
+
+

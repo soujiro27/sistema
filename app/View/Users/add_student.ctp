@@ -20,7 +20,11 @@
  			'id'=>'grupo_id',
  			'empty'=>'selecciona un grupo'));
  		echo $this->Form->input ('StudentProfile.matricula',array('label'=>'Matricula','placeholder'=>'Formato de la matricula isc2014001'));
+<<<<<<< HEAD
  		 echo $this ->Form ->hidden('StudentProfile.semester',array('label'=>'cuatrimestre','id'=>'cuatriPerfil','type'=>'text'));
+=======
+ 		echo $this ->Form ->hidden('StudentProfile.semester',array('label'=>'cuatrimestre','id'=>'cuatriPerfil'));
+>>>>>>> upstream/master
  
  		echo $this->Form->hidden('group_id',array('value'=> '8'));
  		echo $this->Form->end('Registrar Estudiante');

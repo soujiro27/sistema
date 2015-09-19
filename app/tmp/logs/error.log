@@ -34427,6 +34427,7 @@ Stack Trace:
 #3 /var/www/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+<<<<<<< HEAD
 2015-09-13 04:29:34 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
 Exception Attributes: array (
   'class' => 'Mysql',
@@ -34565,6 +34566,83 @@ Stack Trace:
 #0 /opt/lampp/htdocs/sistema/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 23)
 #1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 23, Array)
 #2 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 23, Array)
+#3 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+=======
+2015-09-12 22:30:43 Error: [MissingControllerException] Controller class AgregardirectorController could not be found.
+Exception Attributes: array (
+  'class' => 'AgregardirectorController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/agregardirector
+Stack Trace:
+#0 /var/www/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-12 22:34:47 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/sistema/app/Controller/CoursesController.php, line 123]
+2015-09-12 22:34:47 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /sistema/courses/add
+Stack Trace:
+#0 /var/www/sistema/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sistem...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sistem...', 123, Array)
+#2 /var/www/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sistem...', 123, Array)
+#3 /var/www/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-12 22:35:23 Error: Fatal Error (1): Call to a member function find() on null in [/var/www/sistema/app/Controller/CoursesController.php, line 123]
+2015-09-12 22:35:23 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /sistema/courses/add
+Stack Trace:
+#0 /var/www/sistema/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/sistem...', 123)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/sistem...', 123, Array)
+#2 /var/www/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/sistem...', 123, Array)
+#3 /var/www/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-13 00:26:17 Error: [MissingControllerException] Controller class SemesterController could not be found.
+Exception Attributes: array (
+  'class' => 'SemesterController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/semester/add
+Stack Trace:
+#0 /var/www/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-13 00:26:45 Error: [MissingControllerException] Controller class SemesterController could not be found.
+Exception Attributes: array (
+  'class' => 'SemesterController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/semester/registrarcuatrimestre
+Stack Trace:
+#0 /var/www/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-14 21:32:59 Error: [MissingControllerException] Controller class AddStudentController could not be found.
+Exception Attributes: array (
+  'class' => 'AddStudentController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/addStudent
+Stack Trace:
+#0 /var/www/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-14 21:33:04 Error: [MissingControllerException] Controller class AdStudentController could not be found.
+Exception Attributes: array (
+  'class' => 'AdStudentController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/adStudent
+Stack Trace:
+#0 /var/www/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+>>>>>>> upstream/master
+2015-09-15 19:50:44 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL) in [/opt/lampp/htdocs/sistema/app/View/Users/verasistencias.ctp, line 99]
+2015-09-15 19:50:44 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL)
+Request URL: /sistema/users/verasistencias/
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 99)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 99, Array)
+#2 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 99, Array)
 #3 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}

@@ -11,7 +11,7 @@ public $uses = array('User', 'StudentProfile','Career','Grupo','EmployeeProfile'
 public function beforeFilter(){
 	parent::beforeFilter();
 	// $this->Auth->allow('indexcoordinator','indexTeacher','vercalificaciones','materiasporgerarquia','index');
-	$this->Auth->allow('gruposxcarreraycuatri','consultarasistencias','fechashorarios','materiasporgerarquia','cerrarcuatri');
+	$this->Auth->allow('gruposxcarreraycuatri','consultarasistencias','fechashorarios','materiasporgerarquia','cerrarcuatri','agregardirector');
 	
 	// if ($this->Auth->loggedIn()) {
 	// $this->Auth->deny('login');
@@ -232,7 +232,7 @@ public function addStudent(){
 			$this->Session->setFlash('Estudiante agregado');
 			// debug($existe);
 			// debug($this->request->data);
-			$this->redirect(array('action'=>'indexStudent'));
+			$this->redirect(array('action'=>'index'));
 			endif;
 		}
 

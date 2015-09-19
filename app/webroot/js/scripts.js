@@ -153,18 +153,11 @@ function gruposXcarrera() {
 
 function getSemester() {
 	$('#grupo_id').on('change',function(){
-		var semestre = $('#grupo_id option:selected').text().substr(0,1);
-		console.log('elsemestre es'+semestre);
-		var existe =$('input#StudentProfileSemester').length;
-		var inputS='<input type="hidden" name="data[StudentProfile][semester]" label="cuatrimestre" id="StudentProfileSemester" value="'+semestre+'"  >';
-		if (existe > 0 ){
-			$('input#StudentProfileSemester').remove();
-			$('form#formulario').append(inputS);
+		var semestre = $('#grupo_id option:selected').text().split(' ');
+		// alert('elsemestre es'+semestre[0]);
+		$('#cuatriPerfil').val(semestre[0]);
+		
 
-
-		}else {
-			$('form#formulario').append(inputS);
-		}
 
 		
 	});
@@ -1819,22 +1812,36 @@ function consultaAsistencias(){
 
  						if(parseInt(response[w].Assist.status) ==1){
  							estado="Asistencia";
+ 							$('td.estado').css('background','green');
  						}else if(parseInt(response[w].Assist.status) ==2){
  							estado="Retardo";
+ 							$('td.estado').css('background','yellow');
  						}else if(parseInt(response[w].Assist.status) ==3){
  							estado="Falta";
+ 								$('td.estado').css('background','red');
  						}
  						if($('select#asistenciaCarrera').attr('data-tipo')==6){
 
- 						fila='<tr class="resultAsist"><td class="idAsistencia" data-asistid="'+response[w].Assist.id+'">'+response[w].User.name+'</td><td>'+response[w].Assist.date_assist+'</td><td>'+estado+'</td><td class="notasAsistencia">'+response[w].Assist.note+'</td><td class="notasAsistencia"><a href="/sistema/users/editarasistencia/'+response[w].Assist.id+'">Editar asistencia</a></td></tr>';
+ 						fila='<tr class="resultAsist"><td class="idAsistencia" data-asistid="'+response[w].Assist.id+'">'+response[w].User.name+'</td><td>'+response[w].Assist.date_assist+'</td><td class="estado">'+estado+'</td><td class="notasAsistencia">'+response[w].Assist.note+'</td><td class="notasAsistencia"><a href="/sistema/users/editarasistencia/'+response[w].Assist.id+'">Editar asistencia</a></td></tr>';
 
 
  						}else {
- 							fila='<tr class="resultAsist"><td>'+response[w].User.name+'</td><td>'+response[w].Assist.date_assist+'</td><td>'+estado+'</td><td>'+response[w].Assist.note+'</tr>';
+ 							fila='<tr class="resultAsist"><td>'+response[w].User.name+'</td><td>'+response[w].Assist.date_assist+'</td><td class="estado">'+estado+'</td><td class="notasAsistencia">'+response[w].Assist.note+'</tr>';
  						}
+
  						resultados.push(fila);
+ 						$('table#resultadosAsistencias').append(resultados);
+							if(parseInt(response[w].Assist.status) ==1){
+ 							$('td.estado').css('background','green');
+ 							console.log("entra");
+ 						}else if(parseInt(response[w].Assist.status) ==2){
+ 							$('td.estado').css('background','yellow');
+ 						}else if(parseInt(response[w].Assist.status) ==3){
+ 								$('td.estado').css('background','red');
+ 						}
+
+
  					}
- 					$('table#resultadosAsistencias').append(resultados);
 
  					if($('#resultadosAsistencias').is(':visible')==true){ 
  						
