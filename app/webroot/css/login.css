@@ -5,70 +5,43 @@
   font-weight: normal;
   font-style: normal;
 }
-div.contenedor {
-  background: url("images/Hexagon-3.jpg");
-  padding: 0% 2%;
-  width: 100%;
-  height: 510px;
+body {
+  background: #2c3e50;
 }
-div.contenedor figure {
-  margin: 0% auto 25% auto;
+div.login {
+  background: #2c3e50;
+}
+div.login figure {
+  margin: 0% auto 5% auto;
   padding: 0;
-  width: 50%;
+  width: 80%;
   display: block;
 }
-div.contenedor figure img {
+div.login figure img {
   width: 100%;
 }
-div.contenedor input {
-  margin: 1% 5% 8% 0%;
-  display: block;
-  width: 70%;
-  display: inline-block;
+div.login form input[type=email],
+div.login form input[type=password] {
   border: none;
-  background: transparent;
-  border-radius: 5px;
-  color: #2c3e50;
-  font-weight: bold;
-  vertical-align: top;
-  padding: 1%;
-  border-bottom: 4px solid #2ecc71;
-}
-div.contenedor input:focus {
-  border-bottom: 3px solid #fff;
-}
-div.contenedor label {
-  display: inline-block;
-  font-family: Flaticon;
-  width: 8%;
-  margin: 0 1% 0 7%;
-  font-size: 25px;
-  color: #2c3e50;
-}
-div.contenedor label[for=userLogin]:after {
-  content: "\e008";
-}
-div.contenedor label[for=passwordLogin]:after {
-  content: '\e004';
-}
-div.contenedor input[type=submit] {
-  background: #2ecc71;
+  margin: 20px auto;
+  display: block;
   color: #fff;
+  background: #2c3e50;
+  border-bottom: 3px solid #bdc3c7;
   padding: 2%;
-  display: block;
-  margin: 2% auto;
+  transition: all 1s;
 }
-div.errores {
-  color: #e74c3c;
-  width: 70%;
-  display: block;
-  margin: 3% auto;
-  padding: 2%;
-  font-weight: bold;
-  text-align: center;
+div.login form input[type=email]:focus,
+div.login form input[type=password]:focus {
+  border-bottom: 3px solid #f39c12;
+  transition: all 1s;
 }
-@media screen and (min-width: 479px) and (orientation: landscape) {
-  div.contenedor figure {
-    margin-bottom: 1%;
-  }
+div.login form input[type=submit] {
+  border: none;
+  background: #f39c12;
+  color: #fff;
+  padding: 4%;
+  display: block;
+  margin: 10px auto;
+  border-bottom: 3px solid #fff;
 }

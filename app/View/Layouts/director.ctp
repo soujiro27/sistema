@@ -13,8 +13,8 @@
 	<?php
 		// echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('normalize','menu','estilo'));
-		echo $this->Html->script(array('jquery','index'));
+		echo $this->Html->css(array('normalize','material.min','estilo','https://fonts.googleapis.com/icon?family=Material+Icons"'));
+		echo $this->Html->script(array('jquery','index','material.min'));
 		
 
 		echo $this->fetch('meta');
@@ -24,8 +24,8 @@
 </head>
 <body>
 	   
-<main class="principal">
 
+<!--
 <?php echo $this->Session->flash(); ?>   
 	
 	<nav class="indexDirector">
@@ -93,8 +93,42 @@
 	</section>
 
 	
-	
-</main>
+	-->
+
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Plataforma Dorados</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Plataforma Dorados</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+  	<figure class=logo>
+			<?php echo $this->Html->image("logoNuevo.png");?>
+	</figure>
+
+	<figure class="fotoUser">
+				<?php 
+		echo $this->Html->image('../files/employee_profile/foto/'.$current_user['EmployeeProfile']['foto_dir'].'/'.'thumb_'.$current_user['EmployeeProfile']['foto']);
+	 ?>
+	</figure>
+  </main>
+</div>
+
 
 
 

@@ -1,6 +1,7 @@
 $(function(){
 
 
+
 	$('p.iconoMenu').on('click',muestraMenu);
 	$('div.cierreMenu').on('click',escondeMenu);
 	$('div.alumnos').on('click',menuAlumnos);
@@ -77,3 +78,4 @@ function salir()
 	var url='/sistema/users/logout';
 	$(location).attr('href',url);
 }
+
