@@ -36369,3 +36369,59 @@ Request URL: /sistema/js/material.js
 Stack Trace:
 #0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-09-20 04:25:28 Error: Fatal Error (1): Call to a member function postlink() on null in [/opt/lampp/htdocs/sistema/app/View/Users/vercarreras.ctp, line 51]
+2015-09-20 04:25:28 Error: [FatalErrorException] Call to a member function postlink() on null
+Request URL: /sistema/users/vercarreras/2
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/opt/lampp/htdo...', 51)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/opt/lampp/htdo...', 51, Array)
+#2 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/opt/lampp/htdo...', 51, Array)
+#3 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-20 04:34:49 Error: Fatal Error (4): syntax error, unexpected '?' in [/opt/lampp/htdocs/sistema/app/View/Users/vercarreras.ctp, line 53]
+2015-09-20 04:34:49 Error: [FatalErrorException] syntax error, unexpected '?'
+Request URL: /sistema/users/vercarreras/2
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/opt/lampp/htdo...', 53)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/opt/lampp/htdo...', 53, Array)
+#2 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/opt/lampp/htdo...', 53, Array)
+#3 /opt/lampp/htdocs/sistema/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-09-20 04:40:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/js/material.min.js
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-20 04:40:33 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/js/material.min.js
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-20 04:41:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/js/material..js
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-20 04:41:30 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/js/material..js
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -14,7 +14,7 @@
 		// echo $this->Html->meta('icon');
 
 		echo $this->Html->css(array('normalize','material.min','estilo','https://fonts.googleapis.com/icon?family=Material+Icons"'));
-		echo $this->Html->script(array('jquery','index','material.min'));
+		echo $this->Html->script(array('jquery','index','material'));
 		
 
 		echo $this->fetch('meta');
@@ -27,41 +27,14 @@
 
 <!--
 <?php echo $this->Session->flash(); ?>   
-	
-	<nav class="indexDirector">
-		
 -->
 
 	
 <div class="demo-layout-transparent mdl-layout mdl-js-layout indexDirector">
-  <header class="mdl-layout__header mdl-layout__header--transparent">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">Plataforma Dorados</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Plataforma</span>
-    <div class="datos">
-    	<figure class="fotoUser">
-				<?php 
-		echo $this->Html->image('../files/employee_profile/foto/'.$current_user['EmployeeProfile']['foto_dir'].'/'.'thumb_'.$current_user['EmployeeProfile']['foto']);
-	 ?>
-	</figure>
-    </div>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="/sistema/users/">Inicio</a>
-      <a class="mdl-navigation__link" href="/sistema/users/indexcoordinator">Coordinadores</a>
-      <a class="mdl-navigation__link" href="">Maestros</a>
-      <a class="mdl-navigation__link" href="">Alumnos</a>
-      <a class="mdl-navigation__link" href="">Salir</a>
+  <?php 
 
-    </nav>
-  </div>
+	echo $this->element('menu');
+	 ?>
   <main class="mdl-layout__content">
   	<figure class=logo>
 			<?php echo $this->Html->image("logoNuevo.png");?>
