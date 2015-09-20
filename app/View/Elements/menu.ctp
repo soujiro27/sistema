@@ -23,7 +23,7 @@
       <a class="mdl-navigation__link" href="/sistema/users/">Inicio</a>
       <a class="mdl-navigation__link" href="/sistema/users/indexcoordinator">Coordinadores</a>
       <a class="mdl-navigation__link" href="/sistema/users/indexTeacher">Maestros</a>
-      <a class="mdl-navigation__link" href="">Asistencias</a>
+      <a class="mdl-navigation__link" href="/sistema/users/verasistencias">Asistencias</a>
        <a class="mdl-navigation__link" href="">Calificaciones</a>
       <a class="mdl-navigation__link" href="">Salir</a>
 
