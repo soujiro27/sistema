@@ -1,27 +1,33 @@
-<section class="maestros">
+
+
+
+
+
 	
-<nav class="maestros">
-		
-	<?php 
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+   <?php 
 
-	echo $this->element('menu');
-	 ?>
-	</nav>
+  echo $this->element('menu');
+   ?>
+  <main class="mdl-layout__content maestros">
+  	
+	<h3>Docentes</h3>
 
-<div class="encabezadoCoordi">
-<h3>Docentes</h3>
-<p class="iconoMenu"></p>	
-</div>
+
+
 
 <section class="datosMaestro">
 	
 <?php foreach($maestros as $k =>$maestro ): ?>
 <article>
-<h2><?php echo $maestro ['EmployeeProfile']['lv_education']." ".$maestro ['User']['name']?></h2>
-<h3><?php echo $maestro ['User']['email'] ?></h3>
 <figure class="avatarMaestro">
 	<?php echo $this->Html->image('../files/employee_profile/foto/'.$maestro['EmployeeProfile']['foto_dir'].'/'.'thumb_'.$maestro['EmployeeProfile']['foto']);?>
 </figure>
+<div class="datosPersonales">
+	
+<h2><?php echo $maestro ['EmployeeProfile']['lv_education']."."." ".$maestro ['User']['name']?></h2>
+<h3><?php echo $maestro ['User']['email'] ?></h3>
+</div>
 
 <?php 
 
@@ -41,7 +47,8 @@
 
 	?>
 
-
+<div class="materiasImpartidas">
+	
 	<?php 
 
 				foreach ($materiasImparte as $key => $impartiendo) {
@@ -54,10 +61,10 @@
 				}
 
 			?>
-<?php endforeach;?>
+</div>
 </article>
+<?php endforeach;?>
 
-</section>
 
 
 		
@@ -89,3 +96,6 @@
 
 
 </section>
+
+  </main>
+</div>

@@ -5,123 +5,246 @@
   font-weight: normal;
   font-style: normal;
 }
-section.contenido header {
-  background: url("images/Hexagon-3.jpg");
-  background-size: 100% 100%;
-  border-bottom: 3px solid #2ecc71;
+.indexDirector {
+  background: url("images/Hexagon-3.jpg") center/cover;
 }
-section.contenido header figure.logo {
-  width: 60%;
-  margin: 0 0% 0 20%;
-  display: inline-block;
-}
-section.contenido header figure.logo img {
-  width: 100%;
-}
-section.contenido header p.iconoMenu {
-  font-family: Flaticon;
-  width: 30px;
-  padding: 5px;
-  margin: 4% 2% 0 2%;
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
   color: #fff;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 26px;
-  display: inline-block;
-  float: right;
 }
-section.contenido header p.iconoMenu:after {
-  content: '\e004';
+div.mdl-layout__drawer {
+  width: 180px;
 }
-section.contenido header div.datos {
+main figure.logo {
+  width: 67%;
+  display: block;
+  margin: 0 auto;
+}
+main figure.logo img {
   width: 100%;
-  padding-bottom: 10px;
 }
-section.contenido header div.datos figure.fotoUser {
-  width: 70px;
-  height: 70px;
-  margin: 1% 1% 0 3%;
+main figure.fotoUser {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 15px auto;
+}
+main figure.fotoUser img {
+  width: 100%;
+  height: 150px;
+  border-radius: 50%;
   border: 3px solid #fff;
-  border-radius: 50%;
-  display: inline-block;
 }
-section.contenido header div.datos figure.fotoUser img {
-  width: 100%;
-  border-radius: 50%;
-}
-section.contenido header div.datos div {
-  vertical-align: top;
-  width: 65%;
-  display: inline-block;
-  margin-top: 15px;
-}
-section.contenido header div.datos div h2 {
-  font-size: 100%;
-  font-size: 16px;
-  margin: 1% 0;
+main h2 {
   color: #fff;
-  text-shadow: 2px 2px 2px #2c3e50;
-}
-section.contenido section.bienvenida h2 {
+  font-size: 23px;
   text-align: center;
-  font-family: arial;
-  color: #2c3e50;
-  margin: 1% auto 6% auto;
-  text-shadow: 2px 2px 2px #bdc3c7;
+  margin: 5px auto;
+  font-weight: bold;
+  text-shadow: 2px 3px 1px #2c3e50;
 }
-section.contenido section.bienvenida p {
+/* ----------------- index coordinadores --------*/
+main.coordinadores {
+  margin-top: 40px;
+}
+main.coordinadores h2 {
+  text-shadow: none;
+}
+main.coordinadores article {
+  position: relative;
+  padding: 1% 0 1% 0;
+}
+main.coordinadores article:nth-child(2) {
+  background: #fff;
+}
+main.coordinadores article:nth-child(2) img {
+  border: 3px solid #2c3e50;
+}
+main.coordinadores article:nth-child(2) h2 {
+  color: #2c3e50;
+}
+main.coordinadores button {
+  color: #f39c12;
+  margin-left: 90%;
+}
+main.coordinadores ul {
+  position: absolute;
+  background: #fff;
+  margin: 1px 0 0 0;
+  width: 100px;
+  padding: 1%;
+  border-radius: 7px;
+  top: 25px;
+  right: 10px;
+  display: none;
+}
+main.coordinadores ul li {
+  width: 85%;
   padding: 2%;
-  color: #7f8c8d;
+  list-style: none;
+  display: block;
+}
+main.coordinadores ul li a {
+  text-decoration: none;
+  color: #2c3e50;
+  display: block;
   text-align: left;
 }
-section.contenido section.bienvenida article div.bolita {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: inline-block;
-  vertical-align: top;
-}
-section.contenido section.bienvenida article div.uno {
-  background: #16a085;
-}
-section.contenido section.bienvenida article div.dos {
-  background-color: #2c3e50;
-}
-section.contenido section.bienvenida article div.tres {
-  background-color: #d35400;
-}
-section.contenido section.bienvenida article h3 {
-  margin: 0;
-  font-family: Flaticon;
+main.coordinadores h2 {
+  font-size: 18px;
   text-align: center;
-  padding-top: 8px;
+  display: block;
+  margin: 5px auto;
   color: #fff;
+  line-height: 25px;
 }
-section.contenido section.bienvenida article h3:after {
+main.coordinadores figure {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 5px auto 25px auto;
+}
+main.coordinadores figure img {
+  width: 100%;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+/*-----------------------ver carreras------------*/
+main.verCarreras h2 {
   margin: 0;
-  font-weight: normal;
+}
+main.verCarreras h3 {
+  color: #fff;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 20px;
+}
+main.verCarreras table {
+  width: 100%;
+}
+main.verCarreras table td {
+  text-align: left;
+  padding: 12px 3px 0 0 !important;
+  font-size: size;
+}
+main.verCarreras table a {
+  text-decoration: none;
+  color: #fff;
+  background: #e74c3c;
+  padding: 3%;
+  border-radius: 5px;
+}
+/*---------------maestros-----------------*/
+main.maestros h3 {
+  text-align: center;
+  margin: 5px auto;
+  color: #fff;
   font-size: 22px;
 }
-section.contenido section.bienvenida article h3.coordinador:after {
-  content: '\e007';
+main.maestros article {
+  border-bottom: 3px solid #fff;
 }
-section.contenido section.bienvenida article h3.maestro:after {
-  content: '\e008';
-}
-section.contenido section.bienvenida article h3.alumno:after {
-  content: '\e000';
-}
-section.contenido section.bienvenida article div.texto {
-  width: 82%;
+main.maestros article div.datosPersonales {
+  width: 69%;
   display: inline-block;
-}
-section.contenido section.bienvenida article div.texto h2 {
-  font-size: 16px;
   text-align: left;
-  margin: 1% auto;
 }
-section.contenido section.bienvenida article div.texto p {
-  font-size: 14px;
-  margin: 1% auto;
+main.maestros article div.datosPersonales h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+main.maestros article div.datosPersonales h3 {
+  font-size: 16px;
+}
+main.maestros article div.materiasImpartidas {
+  display: none;
+}
+main.maestros article div.materiasImpartidas p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 0 0;
+  padding: 1%;
+}
+main.maestros article figure {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  margin: 10px 0;
+  padding-left: 1.5%;
+  vertical-align: top;
+}
+main.maestros article figure img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+/*-----------verAsistencias----------*/
+main.verAsistencias h3 {
+  color: #fff;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 22px;
+}
+main.verAsistencias select {
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+  border: none;
+  border-bottom: 3px solid #fff;
+  border-radius: 5px;
+  background: #16a085;
+  padding: 1.5%;
+  color: #fff;
+  font-weight: bold;
+}
+main.verAsistencias label {
+  width: 85%;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: #fff;
+}
+main.verAsistencias input[type=text] {
+  border: none;
+  background: #2980b9;
+  color: #fff;
+  padding: 2%;
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+font-weight
+  border-radius: 5px;
+  border-bottom: 3px solid #2ecc71;
+}
+main.verAsistencias button {
+  border: none;
+  width: 70%;
+  display: block;
+  margin: 20px auto;
+  padding: 2%;
+  background: #f39c12;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 3px solid #fff;
+}
+/*partes css del menu lateral*/
+div.mdl-layout__drawer {
+  background: #2c3e50;
+  color: #fff;
+}
+div.mdl-layout__drawer span {
+  padding-left: 40px !important;
+}
+div.mdl-layout__drawer div.datos figure.fotoUser {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 5px auto;
+}
+div.mdl-layout__drawer div.datos figure.fotoUser img {
+  width: 100%;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #fff;
 }

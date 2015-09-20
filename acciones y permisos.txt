@@ -16,13 +16,16 @@
 alejandrosh@gmail.com
 	
 	/users/indexcoordinator
-	/users/addcoordi
-	/users/indexStudent
+	/users/addcoordi  --> modulo que no se ocupara
+	/users/indexStudent ---> modulo pendiente para ver si es necesario
 	/verasistencias/
 	/vercalificaciones/
 	/users/consultarhorarios
+
 	/users/indexTeacher
 	/semesters/registrarcuatrimestre	
+
+
 	
 
 

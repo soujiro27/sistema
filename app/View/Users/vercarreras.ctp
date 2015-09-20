@@ -1,27 +1,18 @@
-<section class="carrerasCoordi">
 
-
-<nav class="vercarreras">
-		
-	<?php 
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+  <?php 
 
 	echo $this->element('menu');
 	 ?>
-	</nav>
+  <main class="mdl-layout__content verCarreras">
+  	
+		
+	<div class="administradas">
+		<h2>Carreras de:</h2>
+		<h3><?php echo implode($nombre);?></h3>
+	</div>
 
-<div class="encabezadoCoordi">
-<h3>Carreras</h3>
-<p class="iconoMenu"></p>	
-</div>
-
-<div class="administradas">
-<h2>Carreras Administradas por:</h2>
-<h3><?php echo implode($nombre);?></h3>
-</div>
-
-
-
-<table class="carreras">
+	<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
 	
 
 
@@ -31,13 +22,18 @@
 		
 		
 		<td class="nombre"> <?php echo $career[$administra['Usrcareer']['career_id']];?> </td>
-		<td class="accion"> <?php echo $this->Form->postlink('Eliminar',array('action'=>'eliminacc',$administra['Usrcareer']['id'],$administra['Usrcareer']['user_id']),array('confirm'=>'Deceas dar de baja el control de la carrera: '.$career[$administra['Usrcareer']['career_id']].' para este usuario'));?></td>
+		<td class="accion"> 
+			
+	<?php echo $this->Form->postlink('Eliminar',array('action'=>'eliminacc',$administra['Usrcareer']['id'],$administra['Usrcareer']['user_id']),array('confirm'=>'Deceas dar de baja el control de la carrera: '.$career[$administra['Usrcareer']['career_id']].' para este usuario'));?>
+
+
+
+		</td>
 		</tr>
 
 <?php endforeach;?>
 
 </table>
 
-<!--
-<?php echo $this->Html->link('Volver atras',array('controller'=>'users','action'=>'indexcoordinator'));?>  -->
-</section>
+  </main>
+</div>

@@ -1,36 +1,29 @@
-<section class="consultarAsistencias">
-<nav class="asistencias">
-		
-	<?php 
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+   <?php 
 
-	echo $this->element('menu');
-	 ?>
-	</nav>
-
-
-<div class="encabezadoCoordi">
-<h3>Consultar asistencias</h3>
-<p class="iconoMenu"></p>	
-</div>
-
+  echo $this->element('menu');
+   ?>
+  <main class="mdl-layout__content verAsistencias">
+  	<h3>Asistencias</h3>
+			
 <select id="asistenciaCarrera" data-tipo="<?php echo $current_user['group_id']; ?>">
-	<option value="txt">Carrera</option>
-	<?php 
-	if($current_user['group_id']== 6 ){
-		foreach($carreras as $k =>$carrera){
+		<option value="txt">Carrera</option>
+		<?php 
+			if($current_user['group_id']== 6 ){
+			foreach($carreras as $k =>$carrera){
 			echo '<option value="'.$carrera['career_id'].'">'.$carrera['career_abrev'].'</option>';
 			
-		}
-	}else if($current_user['group_id']== 5){
+												}
+			}else if($current_user['group_id']== 5){
 		foreach($carreras as $k =>$carrera){
 			echo '<option value="'.$carrera['Career']['id'].'">'.$carrera['Career']['abrev'].'</option>';
 			
-		}
-	}
+												}
+			}
 
-	?>
+		?>
 </select>
-
+	
 
 <select  id="cuatriAsistencia" >
 	<option value="txt">Cuatrimestre</option>
@@ -56,16 +49,26 @@
 </select>
 
 <form id="opcionBusqueda">
-<input type="radio" name="busca" value="dia">Por dia
-<input type="radio" name="busca" value="rango">Por rango
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+  <input type="radio" id="option-1" class="mdl-radio__button" name="busca" value="dia"/>
+  <span class="mdl-radio__label">Por Dia</span>
+</label>
+
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="busca" value="rango" />
+  <span class="mdl-radio__label">Por Rango</span>
+</label>
+
+
+
 </form>
 
 
 
 
 	
-<input type="text"  id="fechaAsistencia1" class="datepicker" hidden placeholder="Fecha Inicio">
-<input type="text"  id="fechaAsistencia2" class="datepicker" hidden placeholder="Fecha Final">
+<input type="text"  id="fechaAsistencia1" class="datepicker"   hidden placeholder="Fecha Inicio">
+<input type="text"  id="fechaAsistencia2" class="datepicker"   hidden placeholder="Fecha Final">
 <button id="buscaAsistencia">Buscar</button>
 
 <div id="seccionAsistencias">
@@ -93,13 +96,16 @@
 
 
 <?php 
+
 	// if($current_user['group_id']==6){
+
 
 echo $this->Html->script('scripts');
 
 	//}
 ?>
-</section>
 
 
+  </main>
+</div>
 
