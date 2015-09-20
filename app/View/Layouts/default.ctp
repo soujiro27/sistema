@@ -13,8 +13,8 @@
 	<?php
 		// echo $this->Html->meta('icon');
 
-		echo $this->Html->css(array('jquery-ui.min','https://fonts.googleapis.com/icon?family=Material+Icons"','material.min','login'));
-		echo $this->Html->script(array('jquery','jquery-ui.min','material.min','index'));
+		echo $this->Html->css(array('jquery-ui.min','https://fonts.googleapis.com/icon?family=Material+Icons"','material.min','login','estilo'));
+		echo $this->Html->script(array('jquery','jquery-ui.min','material','index'));
 		
 
 		echo $this->fetch('meta');

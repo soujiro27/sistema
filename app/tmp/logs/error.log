@@ -36351,3 +36351,21 @@ Request URL: /sistema/files/employee_profile/foto/1/thumb_direct.jpeg
 Stack Trace:
 #0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-09-20 02:44:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/js/material.js
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-20 02:44:45 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/js/material.js
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
