@@ -36506,3 +36506,21 @@ Stack Trace:
 #0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 >>>>>>> materialize
+2015-09-20 22:20:56 Error: [MissingControllerException] Controller class ConsultarcalificacionesController could not be found.
+Exception Attributes: array (
+  'class' => 'ConsultarcalificacionesController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/consultarcalificaciones/8/4/23/1/1
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-09-20 22:32:51 Error: [MissingControllerException] Controller class ConsultarcalificacionesController could not be found.
+Exception Attributes: array (
+  'class' => 'ConsultarcalificacionesController',
+  'plugin' => NULL,
+)
+Request URL: /sistema/consultarcalificaciones/8/4/23/1/1
+Stack Trace:
+#0 /opt/lampp/htdocs/sistema/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

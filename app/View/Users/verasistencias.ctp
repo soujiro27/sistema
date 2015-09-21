@@ -67,19 +67,19 @@
 
 
 	
-<input type="text"  id="fechaAsistencia1" class="datepicker"   hidden placeholder="Fecha Inicio">
-<input type="text"  id="fechaAsistencia2" class="datepicker"   hidden placeholder="Fecha Final">
+<input type="text"  id="fechaAsistencia1" class="datepicker"    placeholder="Fecha Inicio">
+<input type="text"  id="fechaAsistencia2" class="datepicker"    placeholder="Fecha Final">
 <button id="buscaAsistencia">Buscar</button>
 
 <div id="seccionAsistencias">
 	
-<table id="resultadosAsistencias" hidden>
+<table id="resultadosAsistencias" class="tablaAsistencias">
 
 	<tr class="encabezadosTabla">
-		<th>Nombre</th>
-		<th>Fecha</th>
-		<th>Estatus</th>
-		<th class="notasAsistencia">Nota</th>
+		<th class="headerNombre">Nombre</th>
+		<th class="headerFecha">Fecha</th>
+		<th class="headerStatus">Estatus</th>
+		<th class="notasAsistencia mdl-data-table__cell--non-numeric">Nota</th>
 		<?php 
 
 		if($current_user['group_id']==6){
@@ -95,6 +95,11 @@
 
 
 
+
+
+  </main>
+</div>
+
 <?php 
 
 	// if($current_user['group_id']==6){
@@ -104,8 +109,3 @@ echo $this->Html->script('scripts');
 
 	//}
 ?>
-
-
-  </main>
-</div>
-

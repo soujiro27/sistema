@@ -789,7 +789,7 @@ function materiasPorCoordinador(){
 
 							
 
-							selectini='<select class="listaGrupos"><option value="txt">--Selecciona un grupo--</option>';
+							selectini='<select class="listaGrupos"><option value="txt">Gpo</option>';
 							sumaOpciones='';
 							for(q=0,n=grupo.length;q<n;q++){
 								opcionesGrupos='<option value="'+grupo[q].Grupo.id+'">'+grupo[q].Grupo.name+'</option>'
@@ -1491,12 +1491,12 @@ $(document).on('change','.listaGrupos',function(){
 				$(document).find('td.checkTieneMod').eq(numero).append(respuesta);
 
 				if(response == "✓" ){
-					link='<a class="linkVer" href="/sistema/courses/vermodulos/'+materiaLink+'/'+grup+'">Editar horario</a>'
+					link='<a class="linkVer" href="/sistema/courses/vermodulos/'+materiaLink+'/'+grup+'">Editar</a>'
 					$(document).find('td.linkContainer div.uno').eq(numero).append(link);
 					
 				}else if(response == '✖') {
 					// link='<a class="linkVer" href="../agregarHorario/'+materiaLink+'/'+grup+'">agregar horario</a>'
-					link='<a class="linkagrega" href="/sistema/courses/agregarHorario/'+materiaLink+'/'+carreraLink+'/'+grup+'">Agregar horario</a>'
+					link='<a class="linkagrega" href="/sistema/courses/agregarHorario/'+materiaLink+'/'+carreraLink+'/'+grup+'">Agregar</a>'
 
 					$(document).find('td.linkContainer div.uno').eq(numero).append(link);
 				}
@@ -1519,11 +1519,11 @@ $(document).on('change','.listaGrupos',function(){
 			
 			if( parseInt(response) === 1){
 				// lnk='<p class="pStatus">Ya tiene profesor asignado </p>';
-				lnk='<a class="reasignaMat" href="/sistema/courses/reasignarProf/'+materiaLink+'/'+grup+'"> Reasignar profesor</a>'
+				lnk='<a class="reasignaMat" href="/sistema/courses/reasignarProf/'+materiaLink+'/'+grup+'">Reasignar</a>'
 			$(document).find('td.linkContainer div.dos').eq(numero).append(lnk);
 				
 			}else if(parseInt(response) === 0 ){
-				lnk='<a  class="linkAsigna" href="/sistema/courses/asignarProfesor/'+materiaLink+'/'+grup+'">Asignar profesor </a>';
+				lnk='<a  class="linkAsigna" href="/sistema/courses/asignarProfesor/'+materiaLink+'/'+grup+'">Asignar</a>';
 			$(document).find('td.linkContainer div.dos').eq(numero).append(lnk);
 			}
 			console.log(response);
@@ -1811,13 +1811,13 @@ function consultaAsistencias(){
  						estado='';
 
  						if(parseInt(response[w].Assist.status) ==1){
- 							estado="Asistencia";
+ 							estado="A";
  							$('td.estado').css('background','green');
  						}else if(parseInt(response[w].Assist.status) ==2){
- 							estado="Retardo";
+ 							estado="R";
  							$('td.estado').css('background','yellow');
  						}else if(parseInt(response[w].Assist.status) ==3){
- 							estado="Falta";
+ 							estado="F";
  								$('td.estado').css('background','red');
  						}
  						if($('select#asistenciaCarrera').attr('data-tipo')==6){
@@ -1826,7 +1826,7 @@ function consultaAsistencias(){
 
 
  						}else {
- 							fila='<tr class="resultAsist"><td>'+response[w].User.name+'</td><td>'+response[w].Assist.date_assist+'</td><td class="estado">'+estado+'</td><td class="notasAsistencia">'+response[w].Assist.note+'</tr>';
+ 							fila='<tr><td>'+response[w].User.name+'</td><td>'+response[w].Assist.date_assist+'</td><td class="estado">'+estado+'</td><td class="notasAsistencia">'+response[w].Assist.note+'</tr>';
  						}
 
  						resultados.push(fila);

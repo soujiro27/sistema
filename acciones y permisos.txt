@@ -21,7 +21,7 @@ alejandrosh@gmail.com
 	/verasistencias/
 	/vercalificaciones/
 	/users/consultarhorarios
-
+cea
 	/users/indexTeacher
 	/semesters/registrarcuatrimestre	
 
@@ -39,8 +39,8 @@ juaquinalcantar@gmail.com
 	/plannings/ ok
 	/users/addStudentok
 	/users/indexStudent ok
-	/users/addTeacher ok 
-	/users/indexTeacher ok
+	/users/addTeacher ok --------
+	/users/indexTeacher ok ---------
 	/users/vercalificaciones/ ok
 	/courses/ *
 	/verasistencias/

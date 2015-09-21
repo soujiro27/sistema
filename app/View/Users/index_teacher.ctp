@@ -29,6 +29,8 @@
 <h3><?php echo $maestro ['User']['email'] ?></h3>
 </div>
 
+<div class="opcionesMaestro">
+	
 <?php 
 
 		if($current_user['group_id']== 6 ){
@@ -46,6 +48,7 @@
 	
 
 	?>
+</div>
 
 <div class="materiasImpartidas">
 	
@@ -77,14 +80,7 @@
 		<?php 
 
 		if($current_user['group_id']== 6 ){
-		echo $this->Html->link('agregar maestro', array('controller'=>'users','action'=>'addTeacher'));
-
-		echo "<td>";
-			 echo $this->Html->link('Editar', array('action'=>'editTeacher',$maestro['User']['id'])); 
-			
-			echo $this->Form->postlink('Eliminar',array('action'=>'deleteTeacher',$maestro['User']['id']),array('confirm'=>'deceas Eliminar al maestro')); 
-		echo "</td>";
-		}else {
+		echo $this->Html->link('+', array('controller'=>'users','action'=>'addTeacher'));
 
 		}
 

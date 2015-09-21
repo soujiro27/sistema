@@ -1,6 +1,11 @@
-<div class="form">
-<fieldset>
-	<legend>Agregar Profesor</legend>
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+   <?php 
+
+  echo $this->element('menuCoordinador');
+   ?>
+  <main class="mdl-layout__content addTeacher">
+  	
+<h3>Agregar Profesor</h3>
 
 
 	<?php 
@@ -23,7 +28,43 @@
 
 ?>
 
-</fieldset>
 
-</div>
+
 <?php echo  $this->Html->script('scripts');?>
+
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

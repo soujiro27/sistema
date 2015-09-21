@@ -126,6 +126,7 @@ main.verCarreras
 
 /*---------------maestros-----------------*/
 main.maestros
+	position relative
 	h3
 		text-align center
 		margin 5px auto
@@ -161,9 +162,39 @@ main.maestros
 				width 100%
 				border-radius 50%
 				border 3px solid white
+	div.opcionesMaestro
+		a
+			width 40%
+			border-radius 7px
+			border-bottom 2px solid blanco
+			display inline-block
+			padding 1%
+			margin 10px 
+			text-decoration none
+			background rojo
+			color blanco
+			text-align center
+			&:nth-child(1)
+				background naranja
+	a[href="/sistema/users/addTeacher"]
+		text-decoration none 
+		color blanco
+		width 30px
+		height 30px
+		background rojo
+		border-radius 50%
+		display block
+		text-align center
+		font-weight bold
+		font-size 26px !important
+		position fixed
+		top 8px
+		right 10px
+		box-shadow 3px 3px 1px black
+		
 
 
-/*-----------verAsistencias----------*/
+/*-----------verAsistencias  verCalificaciones----------*/
 
 main.verAsistencias
 	h3
@@ -209,9 +240,89 @@ main.verAsistencias
 		color blanco
 		font-weight bold
 		border-bottom 3px solid blanco
+	table
+		.notasAsistencia
+			display none
+		th
+			text-align center
+			&.headerNombre
+				width 50%
+			&.headerFecha
+				width 40%
+			&.headerStatus
+				width 10%
+		tr
+			width 100%
+			border-bottom 2px solid blanco
+			&.encabezadosTabla
+				background blanco
+				color verde
+		td
+			text-align center
+			color blanco
 		
-		
-			
+
+
+/*----------------añadir maestro addTEacher && courses ----------*/
+
+main.addTeacher
+	h3
+		color blanco
+		margin 5px auto
+		text-align center
+		font-size 22px
+	input
+		display block
+		width 80%
+		margin 10px auto
+		padding 2%
+		border none
+		background blanco
+		border-bottom 3px solid naranja
+	label
+		width 80%
+		padding 1%
+		color blanco
+		text-align left
+		display block
+		margin 10px auto
+	select
+		width 80%
+		display block
+		margin 10px auto
+		border none
+		border-bottom 3px solid blanco 
+		border-radius 5px 
+		background verde
+		padding 1.5%
+		color blanco
+		font-weight bold
+	input[type=submit]
+		background naranja
+		color blanco
+		border-bottom 3px solid rojo
+	table#listadoDeMaterias
+		width 100%
+		tr
+			width 100%
+			&.encabezadoMaterias
+				background blanco
+				color azulObscuro
+			&:nth-child(even)
+				background verde
+				color blanco
+				
+		select
+			width 100%
+			padding 0
+			text-align left
+		td
+			text-align left
+			&.linkContainer
+				text-align center
+		a
+			text-decoration none
+			color blanco
 
 /*partes css del menu lateral*/
 div.mdl-layout__drawer
@@ -230,3 +341,5 @@ div.mdl-layout__drawer
 				height 90px
 				border-radius 50%
 				border 3px solid blanco
+				
+

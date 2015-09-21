@@ -1,5 +1,19 @@
-<h3>Consultar calificaciones </h3>
-<span hidden class="rangoUser" data-rango="<?php echo $current_user['group_id'];?>"></span>
+
+
+
+
+
+
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+   <?php 
+
+  echo $this->element('menu');
+   ?>
+  <main class="mdl-layout__content verAsistencias">
+  	<h3>Calificaciones</h3>
+
+		<span hidden class="rangoUser" data-rango="<?php echo $current_user['group_id'];?>"></span>
 <?php 
 
 // pr($carreras);
@@ -63,3 +77,6 @@ echo '</select>';
 	
 </section>
 <?php echo $this->Html->script('scripts');?>
+
+  </main>
+</div>

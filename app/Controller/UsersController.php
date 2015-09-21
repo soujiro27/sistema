@@ -126,6 +126,9 @@ public function index() {
 	if($this->Auth->user('group_id')== 5){
 		$this->layout='director';
 	 }
+	 else if($this->Auth->user('group_id')== 6){
+		$this->layout='coordinador';
+	 }
 
 	
 

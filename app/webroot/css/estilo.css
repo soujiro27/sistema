@@ -136,6 +136,9 @@ main.verCarreras table a {
   border-radius: 5px;
 }
 /*---------------maestros-----------------*/
+main.maestros {
+  position: relative;
+}
 main.maestros h3 {
   text-align: center;
   margin: 5px auto;
@@ -179,7 +182,38 @@ main.maestros article figure img {
   border-radius: 50%;
   border: 3px solid #fff;
 }
-/*-----------verAsistencias----------*/
+main.maestros div.opcionesMaestro a {
+  width: 40%;
+  border-radius: 7px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  padding: 1%;
+  margin: 10px;
+  text-decoration: none;
+  background: #e74c3c;
+  color: #fff;
+  text-align: center;
+}
+main.maestros div.opcionesMaestro a:nth-child(1) {
+  background: #f39c12;
+}
+main.maestros a[href="/sistema/users/addTeacher"] {
+  text-decoration: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: #e74c3c;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 26px !important;
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  box-shadow: 3px 3px 1px #000;
+}
+/*-----------verAsistencias  verCalificaciones----------*/
 main.verAsistencias h3 {
   color: #fff;
   margin: 5px auto;
@@ -227,6 +261,103 @@ main.verAsistencias button {
   color: #fff;
   font-weight: bold;
   border-bottom: 3px solid #fff;
+}
+main.verAsistencias table .notasAsistencia {
+  display: none;
+}
+main.verAsistencias table th {
+  text-align: center;
+}
+main.verAsistencias table th.headerNombre {
+  width: 50%;
+}
+main.verAsistencias table th.headerFecha {
+  width: 40%;
+}
+main.verAsistencias table th.headerStatus {
+  width: 10%;
+}
+main.verAsistencias table tr {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+main.verAsistencias table tr.encabezadosTabla {
+  background: #fff;
+  color: #16a085;
+}
+main.verAsistencias table td {
+  text-align: center;
+  color: #fff;
+}
+/*----------------añadir maestro addTEacher && courses ----------*/
+main.addTeacher h3 {
+  color: #fff;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 22px;
+}
+main.addTeacher input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 2%;
+  border: none;
+  background: #fff;
+  border-bottom: 3px solid #f39c12;
+}
+main.addTeacher label {
+  width: 80%;
+  padding: 1%;
+  color: #fff;
+  text-align: left;
+  display: block;
+  margin: 10px auto;
+}
+main.addTeacher select {
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+  border: none;
+  border-bottom: 3px solid #fff;
+  border-radius: 5px;
+  background: #16a085;
+  padding: 1.5%;
+  color: #fff;
+  font-weight: bold;
+}
+main.addTeacher input[type=submit] {
+  background: #f39c12;
+  color: #fff;
+  border-bottom: 3px solid #e74c3c;
+}
+main.addTeacher table#listadoDeMaterias {
+  width: 100%;
+}
+main.addTeacher table#listadoDeMaterias tr {
+  width: 100%;
+}
+main.addTeacher table#listadoDeMaterias tr.encabezadoMaterias {
+  background: #fff;
+  color: #2c3e50;
+}
+main.addTeacher table#listadoDeMaterias tr:nth-child(even) {
+  background: #16a085;
+  color: #fff;
+}
+main.addTeacher table#listadoDeMaterias select {
+  width: 100%;
+  padding: 0;
+  text-align: left;
+}
+main.addTeacher table#listadoDeMaterias td {
+  text-align: left;
+}
+main.addTeacher table#listadoDeMaterias td.linkContainer {
+  text-align: center;
+}
+main.addTeacher table#listadoDeMaterias a {
+  text-decoration: none;
+  color: #fff;
 }
 /*partes css del menu lateral*/
 div.mdl-layout__drawer {
